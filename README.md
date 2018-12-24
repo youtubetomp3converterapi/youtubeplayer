@@ -26,7 +26,7 @@ Youtube to mp3 conversion API's
 <li role="presentation" class="active"><a href="https://api.download-lagu-mp3.com" aria-controls="home" role="tab" data-toggle="tab">High Performance Dedicated Servers</a></li>
 </ul>
 </div>
-<h4 class="panel-title panel-heading">Example MP3 Button</h4>
+<h4 class="panel-title panel-heading">Video Player</h4>
 </div>
 </div>
 <div role="tabpanel" class="tab-pane fade" id="videos-button-api">
@@ -34,7 +34,7 @@ Youtube to mp3 conversion API's
 </pre>
 </div>
 </div>
-<h4 class="panel-title panel-heading">Example Video Button</h4>
+<h4 class="panel-title panel-heading">Audio Player</h4>
 </div>
 </div>
 <div role="tabpanel" class="tab-pane fade" id="videos-button-api">
