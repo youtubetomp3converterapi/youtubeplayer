@@ -20,7 +20,7 @@ YouTube and Vimeo have nice APIs to allow JavaScript developers to control the p
 </div>
 </div>
 <div role="tabpanel" class="tab-pane fade" id="videos-button-api">
-<pre class="prettyprint lang-html"><iframe src="https://stream.download-lagu-mp3.com/video.php?id=[YOUTUBE ID]" width="100%" height="316" frameBorder="0" scrolling="no" allowfullscreen></iframe>
+<pre class="prettyprint lang-html"><iframe src="https://stream.download-lagu-mp3.com/video.php?id=zkjxXhRBN6A" width="100%" height="316" frameBorder="0" scrolling="no" allowfullscreen></iframe>
 </pre>
 </div>
 </div>
@@ -28,6 +28,6 @@ YouTube and Vimeo have nice APIs to allow JavaScript developers to control the p
 </div>
 </div>
 <div role="tabpanel" class="tab-pane fade" id="videos-button-api">
-<pre class="prettyprint lang-html"><iframe src="https://stream.download-lagu-mp3.com/audio.php?id=[YOUTUBE ID]" width="100%" height="65"></iframe></pre>
+<pre class="prettyprint lang-html"><iframe src="https://stream.download-lagu-mp3.com/audio.php?id=zkjxXhRBN6A" width="100%" height="65"></iframe></pre>
 </div>
 </div>
