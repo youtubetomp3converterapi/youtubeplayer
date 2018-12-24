@@ -28,9 +28,5 @@ Result:
 <iframe src="https://stream.download-lagu-mp3.com/video.php?id=UFiDi65kUZA" width="100%" height="550" frameBorder="0" scrolling="no" allowfullscreen></iframe>
 
 <h4 class="panel-title panel-heading">Audio Player</h4>
-</div>
-</div>
 <div role="tabpanel" class="tab-pane fade" id="videos-button-api">
-<pre class="prettyprint lang-html"><iframe src="https://stream.download-lagu-mp3.com/audio.php?id=zkjxXhRBN6A" width="100%" height="65"></iframe></pre>
-</div>
-</div>
+<pre class="prettyprint lang-html"><iframe src="https://stream.download-lagu-mp3.com/audio.php?id=zkjxXhRBN6A" width="100%" height="100%"></iframe></pre>
