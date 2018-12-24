@@ -1,4 +1,4 @@
-YouTube Player
+# Easy mediaelementjs player for youtube
 YouTube and Vimeo have nice APIs to allow JavaScript developers to control the playback of embedded content (oh, and YouTube has a new design). They’ve also updated the APIs to use the newer <iframe> embed style instead requiring <object><embed> flash tags. But as powerful as those APIs are, they are not consistent with each other and neither one conforms to HTML5 <video> properties or events so you can’t leverage your existing skills or code.
 
 
