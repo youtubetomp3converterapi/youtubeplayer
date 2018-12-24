@@ -18,10 +18,12 @@ YouTube and Vimeo have nice APIs to allow JavaScript developers to control the p
 </div>
 <h4 class="panel-title panel-heading">Video Player</h4>
 </div>
-</div>
+
+Iframe Example
+
 <code><iframe src="https://stream.download-lagu-mp3.com/video.php?id=zkjxXhRBN6A" width="100%" height="316" frameBorder="0" scrolling="no" allowfullscreen></iframe></code>
 
-example
+Result:
 
 <iframe src="https://stream.download-lagu-mp3.com/video.php?id=zkjxXhRBN6A" width="100%" height="316" frameBorder="0" scrolling="no" allowfullscreen></iframe>
 
