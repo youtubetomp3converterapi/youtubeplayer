@@ -27,9 +27,6 @@ Result:
 
 <iframe src="https://stream.download-lagu-mp3.com/video.php?id=UFiDi65kUZA" width="100%" height="550" frameBorder="0" scrolling="no" allowfullscreen></iframe>
 
-</pre>
-</div>
-</div>
 <h4 class="panel-title panel-heading">Audio Player</h4>
 </div>
 </div>
