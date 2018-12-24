@@ -21,11 +21,11 @@ YouTube and Vimeo have nice APIs to allow JavaScript developers to control the p
 
 Iframe Example
 
-<code><iframe src="https://stream.download-lagu-mp3.com/video.php?id=Jsjtt5dWDYU" width="100%" height="100%" frameBorder="0" scrolling="no" allowfullscreen></iframe></code>
+<code><iframe src="https://stream.download-lagu-mp3.com/video.php?id=Jsjtt5dWDYU" width="100%" height="500" frameBorder="0" scrolling="no" allowfullscreen></iframe></code>
 
 Result:
 
-<iframe src="https://stream.download-lagu-mp3.com/video.php?id=Jsjtt5dWDYU" width="100%" height="100%" frameBorder="0" scrolling="no" allowfullscreen></iframe>
+<iframe src="https://stream.download-lagu-mp3.com/video.php?id=Jsjtt5dWDYU" width="100%" height="500" frameBorder="0" scrolling="no" allowfullscreen></iframe>
 
 </pre>
 </div>
