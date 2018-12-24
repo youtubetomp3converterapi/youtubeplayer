@@ -1,15 +1,5 @@
-# Youtube Downloader Button/Iframe API
-Youtube to mp3 conversion API's
-<h4 class="panel-title panel-heading">Set the "src" attribute of an HTML iframe to:</h4>
-<pre class="prettyprint lang-html">https://api.download-lagu-mp3.com/@api/button/<b><span class="nocode" style="color:#65b042">{format}</span></b>/<b><span class="nocode" style="color:#65b042">{YouTube-Video-ID}</span></b></pre>
-<h4 class="panel-title panel-heading">Where <code><b>{format}</b></code> is one of the following:</h4>
-<div class="panel-title panel-heading">
-<ul style="margin-bottom:0">
-<li>"<b>mp3</b>" : for MP3 results</li>
-<li>"<b>videos</b>" : for Video w/Audio results</li>
-<li>"<b>videostreams</b>" : for Video-Only results</li>
-<li>"<b>audiostreams</b>" : for Audio-Only results</li>
-</ul>
+YouTube Player
+YouTube and Vimeo have nice APIs to allow JavaScript developers to control the playback of embedded content (oh, and YouTube has a new design). They’ve also updated the APIs to use the newer <iframe> embed style instead requiring <object><embed> flash tags. But as powerful as those APIs are, they are not consistent with each other and neither one conforms to HTML5 <video> properties or events so you can’t leverage your existing skills or code.
 
 
 
