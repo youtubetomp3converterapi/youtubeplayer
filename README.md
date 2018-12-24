@@ -1,127 +1,312 @@
-# ![MediaElementJS](https://cloud.githubusercontent.com/assets/910829/22357262/e6cf32b4-e404-11e6-876b-59afa009f65c.png)
 
-One file. Any browser. Same UI.
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-* Author: John Dyer [http://j.hn/](http://j.hn/)
-* Website: [http://mediaelementjs.com/](http://mediaelementjs.com/)
-* License: [MIT](http://mediaelement.mit-license.org/)
-* Meaning: Use everywhere, keep copyright, it'd be swell if you'd link back here.
-* Thanks: my employer, [Dallas Theological Seminary](http://www.dts.edu/)
-* Contributors: [all contributors](https://github.com/mediaelement/mediaelement/graphs/contributors)
+        <title>MediaElement.js - HTML5 video and audio unification framework</title>
+        <meta name="description" content="HTML5 video and audio player with support for YouTube, SoundCloud, Facebook, Vimeo, HLS, Dash, and others."/>
+        <meta name="keywords" content="HTML5, video, H.264, Javascript, media, mp3, mp4"/>
 
-[![GitHub Version](https://img.shields.io/npm/v/mediaelement.svg)](https://github.com/mediaelement/mediaelement)
-[![Build Status](https://img.shields.io/travis/mediaelement/mediaelement.svg)](https://travis-ci.org/mediaelement/mediaelement)
-[![Coverage Status](https://img.shields.io/coveralls/mediaelement/mediaelement.svg)](https://coveralls.io/github/mediaelement/mediaelement)
-[![MIT License](https://img.shields.io/npm/l/mediaelement.svg)](https://mediaelement.mit-license.org/)
-[![CDNJS](https://img.shields.io/cdnjs/v/mediaelement.svg)](https://cdnjs.com/libraries/mediaelement)
-[![jsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/mediaelement/badge?style=rounded)](https://www.jsdelivr.com/package/npm/mediaelement)
+        <!-- fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i">
 
-# Table of Contents
+        <!-- site -->
+        <link rel="stylesheet" href="css/mejs-site.css">
 
-* [Introduction](#intro)
-* [Migrating from `2.x` to `4.x` version](#migration)
-* [Installation and Usage](#installation)
-* [API and Configuration](#api)
-* [Guidelines for Contributors](#guidelines)
-* [Change Log](#changelog)
-* [TODO list](#todo)
-
-<a id="intro"></a>
-## Introduction
-
-_MediaElementPlayer: HTML5 `<video>` and `<audio>` player_
-
-A complete HTML/CSS audio/video player built on top `MediaElement.js`. Many great HTML5 players have a completely separate Flash UI in fallback mode, but MediaElementPlayer.js uses the same HTML/CSS for all players.
-
-`MediaElement.js` is a set of custom Flash plugins that mimic the HTML5 MediaElement API for browsers that don't support HTML5 or don't support the media codecs you're using.
-Instead of using Flash as a _fallback_, Flash is used to make the browser seem HTML5 compliant and enable codecs like H.264 (via Flash) on all browsers.
-
-In general, `MediaElement.js` supports **IE11+, MS Edge, Chrome, Firefox, Safari, iOS 8+** and **Android 4.0+**.
-
-**It is strongly recommended to read the entire documentation and check the `demo` folder to get the most out of this package**. Visit [here](docs) to start.
-
-## * IMPORTANT NOTE for Safari users (Jun 8, 2017)
-
-Since Sierra version, `autoplay` policies have changed. You may experience an error if you try to execute `play` programatically or via `autoplay` attribute with MediaElement, unless `muted` attribute is specified. 
-
-For more information, read https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
+        <!-- library -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+    </head>
+    <body>
 
 
-## * IMPORTANT CHANGES on `4.2.0` version
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <a href="/"><img src="images/logo-orange.svg" alt="MediaElement.js Logo"/></a>
+                    </div>
 
-As part of the continuous improvements the player, we have decided to drop completely support for IE9 and IE10, since market share of those browsers together is 0.4%, according to http://caniuse.com/usage-table.
- 
-This change is for `MediaElement` and `MediaElement Plugins` repositories. 
+                    <div class="brand"><img src="images/mediaelement.svg" alt="MediaElement.js"/><span class="sr-only">MediaElement.js</span></div>
 
-<a id="migration"></a>
-## * IMPORTANT: Migrating from `2.x` to `4.x` version
+                    <div class="menu">
+                        <ul>
+                            <li><a href="https://github.com/mediaelement/mediaelement/blob/master/docs/installation.md">Installation</a></li>
+                            <li><a href="https://github.com/mediaelement/mediaelement/blob/master/docs/usage.md">Usage</a></li>
+                            <li><a href="https://github.com/mediaelement/mediaelement/blob/master/docs/api.md">API</a></li>
+                            <li><a href="https://github.com/mediaelement/mediaelement-plugins">Plugins</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
 
-**NOTE:** `3.x` version has jQuery in the code base, and `4.x` is framework-agnostic. So for either `3.x` or `4.x` versions, the following steps are valid, but it is highly recommended to upgrade to `4.x`.
+        <section class="overview">
+            <div class="container">
+                <h2 class="main">MediaElement.js</h2>
+                <p>A dependable HTML media framework</p>
+                <div class="center">
+                    <a class="button download" href="https://github.com/mediaelement/mediaelement/zipball/master">Download Player</a>
+                </div>
 
-In order to successfully install `4.x` in an existing setup, you must consider the following guidelines:
+                <div class="overview-links">
+                    <a class="github-button" href="https://github.com/mediaelement/mediaelement"
+                       data-size="large"
+                       data-show-count="true"
+                       data-count-aria-label="# stargazers on GitHub" aria-label="Star MediaElement.js on GitHub">Star Us</a>
+                    <a href="https://www.npmjs.com/package/mediaelement">
+                        <img src="https://img.shields.io/npm/v/mediaelement.svg" alt="NPM version" height="25">
+                    </a>
+                </div>
 
-1. If your installation relies on the legacy player classes (i.e., `mejs-player`, `mejs-container`, etc.), you **must** set up the proper namespace. In `2.x`, the default namespace is `mejs-` but now is `mejs__`. In order to set up a new namespace (or the legacy one), use the `classPrefix` configuration, and make sure you use the `mediaelementplayer-legacy` stylesheet provided in the `/build/` folder.
+                <h2 class="main">MediaElement.js Plugins</h2>
+                <p>Boost your player with Chromecast, Google Analytics and more</p>
+                <div class="center">
+                    <a class="button download" href="https://github.com/mediaelement/mediaelement-plugins/zipball/master">Download Plugins</a>
+                </div>
+                <div class="overview-links">
+                    <a class="github-button" href="https://github.com/mediaelement/mediaelement-plugins"
+                       data-size="large"
+                       data-show-count="true"
+                       data-count-aria-label="# stargazers on GitHub" aria-label="Star Mediaelement Plugins on GitHub">Star Us</a>
+                    <a href="https://www.npmjs.com/package/mediaelement-plugins">
+                        <img src="https://img.shields.io/npm/v/mediaelement-plugins.svg" alt="NPM version" height="25">
+                    </a>
+                </div>
+            </div>
+        </section>
 
-2. By default, `MediaElement` has bundled native renderers, such as HLS, M(PEG)-DASH and FLV, as well as YouTube and Flash shims. **If you want to use any other renderer, you MUST refer to the `build/renderers` folder and add as many as you want**. Check `demo/index.html` for a better reference.
 
-3. You **must** set up now the path for the Flash shims if they are not in the same folder as the JS files. To do this, set the path via the `pluginPath` configuration. In the same topic, if you need to support browsers with Javascript disabled, you **must** reference the correct Flash shim, since in `2.x` there was only a single Flash shim and in `3.x` it was split to target specific media types. Check the [Browsers with JavaScript disabled](docs/installation.md#disabled-javascript) section for more details.
+        <!-- player demos -->
+        <section class="players">
 
-4. If you want to use Flash shims from a CDN, do the change related to `pluginPath` setting the CDN's URL, and also setting `shimScriptAccess` configuration as **`always`**.
+            <div class="container">
 
-5. If you need to force the Flash shim, the way to do it in `3.x` version is to use the `renderers` configuration and list them in an array.
+                <h2>Look good. Sound good.</h2>
+                <p>One file. Any browser. Same UI.</p>
 
-6. `pluginType` was removed to favor `rendererName`. If you rely on that element, just create conditionals based on the renderer ID (all listed [here](docs/usage.md#renderers-list)). For example:
+                <div class="media-container">
+                    <h4><a id="video-player" class="anchor" href="#video-player" aria-hidden="true">
+                        <span aria-hidden="true" class="octicon octicon-link"></span></a>
+                        <div class="clearfix">
+                            <span class="title">Video Player</span>
+                            <select name="player1-sources" id="player1-sources">
+                                <option value="">Select source</option>
+                                <option value="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">MP4</option>
+                                <!--<option value="https://upload.wikimedia.org/wikipedia/commons/2/22/Volcano_Lava_Sample.webm">WebM</option>-->
+                                <!--<option value="rtmp://184.72.239.149/vod/BigBuckBunny_115k.mov">RTMP</option>-->
+                                <!--<option value="rtmp://firehose.cul.columbia.edu:1935/vod/mp4:sample.mp4">RTMP</option>-->
+                                <option value="http://www.streambox.fr/playlists/test_001/stream.m3u8">HLS</option>
+                                <option value="http://la2.indexcom.com/me/flv/guqin.flv">FLV</option>
+                                <option value="http://www.bok.net/dash/tears_of_steel/cleartext/stream.mpd">M(PEG)-DASH</option>
+                                <!--<option value="http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd">M(PEG)-DASH</option>-->
+                                <option value="https://www.dailymotion.com/video/x11prnt">DailyMotion</option>
+                                <option value="https://www.youtube.com/watch?v=twYp6W6vt2U">YouTube</option>
+                                <option value="https://player.vimeo.com/video/108018156?title=0&amp;byline=0&amp;portrait=0&amp;badge=0">Vimeo</option>
+                                <option value="https://www.facebook.com/facebook/videos/10155278547321729">Facebook</option>
+                                <option value="https://www.twitch.tv/videos/109010497">Twitch</option>
+                            </select>
+                        </div>
+                    </h4>
 
-```javascript
-$('video, audio').mediaelementplayer({
-	// Configuration
-	success: function(media) {
-		var isNative = /html5|native/i.test(media.rendererName);
+                    <div class="player">
+                        <video id="player1" width="640" height="360" preload="none" style="max-width: 100%" controls poster="images/big_buck_bunny.jpg" playsinline webkit-playsinline>
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+                            <track src="dist/mediaelement.vtt" srclang="en" label="English" kind="subtitles" type="text/vtt">
+                        </video>
+                    </div>
+                </div>
 
-		var isYoutube = ~media.rendererName.indexOf('youtube');
+                <div class="media-container">
+                    <h4><a id="audio-player" class="anchor" href="#audio-player" aria-hidden="true">
+                        <span aria-hidden="true" class="octicon octicon-link"></span></a>
+                        <div class="clearfix">
+                            <span class="title">Audio Player</span>
+                            <select name="player2-sources" id="player2-sources">
+                                <option value="">Select source</option>
+                                <option value="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3">MP3</option>
+                                <!--<option value="http://www.vorbis.com/music/Hydrate-Kenny_Beltrey.ogg">OGG</option>-->
+                                <option value="http://db3.indexcom.com/bucket/ram/00/05/64k/05.m3u8">HLS</option>
+                                <!--<option value="rtmp://s3b78u0kbtx79q.cloudfront.net/cfx/st/mp3:fake_empire-cbr">RTMP</option>-->
+                                <option value="https://api.soundcloud.com/tracks/323195515/stream?client_id=95f22ed54a5c297b1c41f72d713623ef">SoundCloud</option>
+                            </select>
+                        </div>
+                    </h4>
 
-		// etc.
-	}
-});
-```
+                    <div class="player">
+                        <audio id="player2" preload="none" controls style="max-width: 100%">
+                            <source src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+            </div>
 
-<a id="installation"></a>
-## Installation and Usage
+        </section><!-- /.players -->
 
-The full documentation on how to install `MediaElement.js` is available at [Installation](docs/installation.md).
 
-A brief guide on how to create and use instances of `MediaElement` available at [Usage](docs/usage.md).
+        <section class="sitesusing">
+            <div class="container">
+                <h2>Used by Smart Folks</h2>
 
-Additional features can be found at https://github.com/mediaelement/mediaelement-plugins.
+                <div class="site-logos">
 
-<a id="api"></a>
-## API and Configuration
+                    <div class="site-logo">
+                        <a href="http://www.wordpress.org/" target="_blank"><img src="images/wordpress.png" alt="Wordpress"/></a>
+                    </div>
 
-`MediaElement.js` has many options that you can take advantage from. Visit [API and Configuration](docs/api.md) for more details.
+                    <div class="site-logo">
+                        <a href="http://www.canvaslms.com/" target="_blank"><img src="images/canvas.png" alt="Instructure Canvas"/></a>
+                    </div>
 
-Also, a `Utilities/Features` guide is available for development. Visit [Utilities/Features](docs/utils.md) for more details.
+                    <div class="site-logo">
+                        <a href="http://www.revision3.com/" target="_blank"><img src="images/revision3.png" alt="Revision3"/></a>
+                    </div>
 
-<a id="guidelines"></a>
-## Guidelines for Contributors
+                    <div class="site-logo">
+                        <a href="http://www.rottentomatoes.com/" target="_blank"><img src="images/rottentomatoes.png" alt="Rotten Tomatoes"/></a>
+                    </div>
 
-If you want to contribute to improve this package, please read [Guidelines](docs/guidelines.md).
+                    <div class="site-logo">
+                        <a href="http://www.teamtreehouse.com/" target="_blank"><img src="images/treehouse.png" alt="Treehouse Coding"/></a>
+                    </div>
 
-**NOTE**: If you would like to contribute with translations, make sure that you also check https://github.com/mediaelement/mediaelement-plugins, and perform the
-translations for the files suffixed as `-i18n`.
+                    <div class="site-logo">
+                        <a href="http://www.mozilla.org/" target="_blank"><img src="images/mozilla.svg" alt="Mozilla Nightly News"/></a>
+                    </div>
 
-<a id="sources"></a>
-## Useful resources
+                    <div class="site-logo">
+                        <a href="http://articles.salsalabs.com/" target="_blank"><img src="images/salsa.png" alt="Salsa Labs"/></a>
+                    </div>
 
-A compilation of useful articles can be found [here](docs/resources.md).
+                    <div class="site-logo">
+                        <a href="http://www.streamindex.com/" target="_blank"><img src="images/streams.svg" alt="StreamS"/></a>
+                    </div>
 
-<a id="changelog"></a>
-## Change Log
+                    <div class="site-logo">
+                        <a href="https://transloadit.com/" target="_blank"><img src="images/transloadit.png" alt="Transloadit"/></a>
+                    </div>
 
-Changes available at [Change Log](changelog.md).
+                    <div class="site-logo">
+                        <a href="https://contao.org/" target="_blank"><img src="images/contao.svg" alt="Contao"/></a>
+                    </div>
 
-<a id="todo"></a>
-## TODO list
+                    <div class="site-logo">
+                        <a href="https://www.er-secure.de/" target="_blank"><img src="images/er-secure.png" alt="ER Secure"/></a>
+                    </div>
 
-**IMPORTANT:** Before posting an issue, it is strongly encouraged to read the whole documentation since it covers the majority of scenarios exposed in prior issues.
+                    <div class="site-logo">
+                        <a href="https://www.defense.gov/" target="_blank"><img src="images/seal.svg" alt="U.S. Department of Defense" style="height:80px"/></a>
+                    </div>
 
-New features and pending bugs can be found at [TODO list](TODO.md).
+                    <div class="site-logo">
+                        <a href="https://medsims.com/" target="_blank"><img src="images/medsims.svg" alt="MedSims from WebMD/Medscape"/></a>
+                    </div>
+
+                </div><!-- /.site-logos -->
+
+            </div>
+        </section>
+
+        <div class="features">
+            <div class="container">
+                <h2><div class="line"><span class="heart">Love</span> HTML5,</div><div class="line"> but having</div><div class="line"> <span class="flash">Fl</span>ashbacks?</div></h2>
+
+                <p>
+                    Easy partner, we can handle it. MediaElement.js is a blazingly fast and amazingly powerful HTML5 audio and video library that creates a
+                    unified feel for media files (MP4, MP3, FLV), streaming content (HLS, M(PEG)-DASH, RTMP), and embeddable players like
+                    YouTube, Vimeo, Twitch, DailyMotion, Facebook, and SoundCloud.
+                </p>
+
+                <div class="center">
+                    <a class="button" href="https://github.com/mediaelement/mediaelement/tree/master/docs" target="_blank">Read the Docs</a>
+                    <a class="button" href="https://github.com/mediaelement/mediaelement" target="_blank">View on GitHub</a>
+                    <a class="button" href="https://github.com/mediaelement/mediaelement-plugins" target="_blank">Enhance MediaElement.js</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="left">
+                    <a href="https://github.com/mediaelement/mediaelement">MediaElement.js</a> was created by
+                    <a href="https://github.com/mediaelement">John Dyer</a> at <a href="http://www.dts.edu/">Dallas Theological
+                    Seminary</a>.
+                </div>
+                <div class="right">Logo and page design by <a href="https://github.com/cobyalmond">Coby Almond</a>.</div>
+            </div>
+        </footer>
+
+        <!-- JS -->
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelement-and-player.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/renderers/dailymotion.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/renderers/facebook.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/renderers/soundcloud.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/renderers/twitch.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/renderers/vimeo.min.js"></script>
+        <script src="https://buttons.github.io/buttons.js"></script>
+        <script src="https://platform.twitter.com/widgets.js"></script>
+        <script>
+
+            var
+                sourcesSelector = document.body.querySelectorAll('select'),
+		        sourcesTotal = sourcesSelector.length
+            ;
+
+            for (var i = 0; i < sourcesTotal; i++) {
+                sourcesSelector[i].addEventListener('change', function (e) {
+                    var
+                        media = e.target.closest('.media-container').querySelector('.mejs__container').id,
+                        player = mejs.players[media]
+                    ;
+
+                    player.setSrc(e.target.value.replace('&amp;', '&'));
+                    player.setPoster('');
+                    player.load();
+
+                });
+
+                // These media types cannot play at all on iOS, so disabling them
+                if (mejs.Features.isiOS) {
+			        if (sourcesSelector[i].querySelector('option[value^="rtmp"]')) {
+                        sourcesSelector[i].querySelector('option[value^="rtmp"]').disabled = true;
+                    }
+                    if (sourcesSelector[i].querySelector('option[value$="webm"]')) {
+                        sourcesSelector[i].querySelector('option[value$="webm"]').disabled = true;
+                    }
+                    if (sourcesSelector[i].querySelector('option[value$=".mpd"]')) {
+                        sourcesSelector[i].querySelector('option[value$=".mpd"]').disabled = true;
+                    }
+			        if (sourcesSelector[i].querySelector('option[value$=".ogg"]')) {
+                        sourcesSelector[i].querySelector('option[value$=".ogg"]').disabled = true;
+                    }
+			        if (sourcesSelector[i].querySelector('option[value$=".flv"]')) {
+                        sourcesSelector[i].querySelector('option[value*=".flv"]').disabled = true;
+        		    }
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+
+                for (var i = 0; i < total; i++) {
+                    new MediaElementPlayer(mediaElements[i], {
+                        pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+                        shimScriptAccess: 'always',
+                        success: function () {
+                            var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
+                            for (var j = 0; j < targetTotal; j++) {
+                                target[j].style.visibility = 'visible';
+                            }
+			            }
+		            });
+                }
+            });
+        </script>
+    </body>
+</html>
