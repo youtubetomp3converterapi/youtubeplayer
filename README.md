@@ -31,4 +31,4 @@ Result:
 
 <iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="55"></iframe>
 
-<h4 class="panel-title panel-heading">LIVE DEMO: </h4>https://youtubeplayer.download-lagu-mp3.com
+<h4 class="panel-title panel-heading">LIVE DEMO: </h4> https://youtubeplayer.download-lagu-mp3.com
