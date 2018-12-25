@@ -1,6 +1,3 @@
-# Easy mediaelementjs player for youtube
-YouTube and Vimeo have nice APIs to allow JavaScript developers to control the playback of embedded content (oh, and YouTube has a new design). They’ve also updated the APIs to use the newer <iframe> embed style instead requiring <object><embed> flash tags. But as powerful as those APIs are, they are not consistent with each other and neither one conforms to HTML5 <video> properties or events so you can’t leverage your existing skills or code.
-<div>
 <h4 class="panel-title panel-heading">Main Feature:</h4>
 <div>
 <div class="panel-heading">
@@ -18,11 +15,11 @@ YouTube and Vimeo have nice APIs to allow JavaScript developers to control the p
 
 Iframe Example
 
-<code><iframe src="https://stream.download-lagu-mp3.com/video.php?id=UFiDi65kUZA" width="100%" height="550" frameBorder="0" scrolling="no" allowfullscreen></iframe></code>
+<code><iframe src="https://stream.download-lagu-mp3.com/video.php?id=UFiDi65kUZA" width="100%" height="551" frameBorder="0" scrolling="no" allowfullscreen></iframe></code>
 
 Result:
 
-<iframe src="https://stream.download-lagu-mp3.com/video.php?id=UFiDi65kUZA" width="100%" height="550" frameBorder="0" scrolling="no" allowfullscreen></iframe>
+<iframe src="https://stream.download-lagu-mp3.com/video.php?id=UFiDi65kUZA" width="100%" height="551" frameBorder="0" scrolling="no" allowfullscreen></iframe>
 
 <h4 class="panel-title panel-heading">Audio Player</h4>
 
