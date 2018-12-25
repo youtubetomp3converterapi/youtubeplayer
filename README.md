@@ -30,3 +30,5 @@ Iframe Example
 Result:
 
 <iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="55"></iframe>
+
+LIVE DEMO PLAYER : <link>https://youtubeplayer.download-lagu-mp3.com</link>
