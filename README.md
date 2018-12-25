@@ -30,7 +30,7 @@ Iframe Example
 
 Result:
 
-<iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="50" frameBorder="0" scrolling="no" allowfullscreen></iframe>
+<iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="50"></iframe>
 
 
 <h4 class="panel-title panel-heading">LIVE DEMO:</h4>
