@@ -28,10 +28,10 @@ Result:
 
 Iframe Example
 
-<code><iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="58"></iframe></code>
+<code><iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="50"></iframe></code>
 
 Result:
 
-<iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="58"></iframe>
+<iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="50"></iframe>
   
-58
+50
