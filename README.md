@@ -17,20 +17,20 @@ YouTube and Vimeo have nice APIs to allow JavaScript developers to control the p
 
 Iframe Example
 
-<code><iframe src="https://stream.download-lagu-mp3.com/video.php?id=UFiDi65kUZA" width="100%" height="500" frameBorder="0" scrolling="no" allowfullscreen></iframe></code>
+<code><iframe src="https://stream.download-lagu-mp3.com/video.php?id=UFiDi65kUZA" width="100%" height="600" frameBorder="0" scrolling="no" allowfullscreen></iframe></code>
 
 Result:
 
-<iframe src="https://stream.download-lagu-mp3.com/video.php?id=UFiDi65kUZA" width="100%" height="500" frameBorder="0" scrolling="no" allowfullscreen></iframe>
+<iframe src="https://stream.download-lagu-mp3.com/video.php?id=UFiDi65kUZA" width="100%" height="600" frameBorder="0" scrolling="no" allowfullscreen></iframe>
 
 <h4 class="panel-title panel-heading">Audio Player</h4>
 
 Iframe Example
 
-<code><iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="52"></iframe></code>
+<code><iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="65"></iframe></code>
 
 Result:
 
-<iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="55"></iframe>
+<iframe src="https://stream.download-lagu-mp3.com/audio.php?id=UFiDi65kUZA" width="100%" height="65"></iframe>
   
-55
+65
